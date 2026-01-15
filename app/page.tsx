@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { MapPin, Award , BookOpen, GraduationCap, Phone, Mail, ChevronRight, Star, Sparkles, CheckCircle2, Monitor, Code2, Laptop } from "lucide-react";
+import { MapPin, Award , BookOpen, GraduationCap, Phone, Mail, ChevronRight, Star, Sparkles, CheckCircle2, Monitor, Code2, Laptop, Calendar, Tv, FileCheck } from "lucide-react";
 
 // --- Premium Animation Components ---
 
@@ -64,7 +64,7 @@ export default function Portfolio() {
             <span className="text-xl md:text-2xl font-serif font-bold tracking-tight text-slate-900">
               Ms. Sandani Hettiarachchi<span className="text-amber-600">.</span>
             </span>
-            <span className="text-[10px] md:text-xs font-medium tracking-widest text-slate-500 uppercase">Expert ICT Educator</span>
+            <span className="text-[10px] md:text-xs font-medium tracking-widest text-slate-500 uppercase">BSc / MIT / PGDE</span>
           </div>
           <button className="hidden md:flex bg-slate-900 text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-amber-600 hover:shadow-lg hover:shadow-amber-600/20 transition-all duration-300 transform hover:-translate-y-0.5">
             Enrol for 2026
@@ -91,7 +91,7 @@ export default function Portfolio() {
                 <span className="italic font-light text-slate-500">with Logic.</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-600 max-w-lg leading-relaxed mb-10">
-                Hi, I am <strong>Ms. Sandani Niroda Hettiarachchi</strong>. I specialize in simplifying complex technical concepts for <strong>Edexcel & Local</strong> syllabuses, ensuring every student masters the code of success.
+                Hi, I am <strong>Ms. Sandani Niroda Hettiarachchi</strong>. With over <strong>25 years of experience</strong>, I specialize in simplifying complex technical concepts for <strong>Edexcel & Local</strong> syllabuses (English / Sinhala Medium).
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -106,9 +106,9 @@ export default function Portfolio() {
               {/* Verified Stats */}
               <div className="grid grid-cols-3 gap-4 md:gap-8 mt-16 pt-10 border-t border-slate-200/60">
                 {[
-                  { label: "Experience", value: "15+" },
-                  { label: "Students", value: "5k+" },
-                  { label: "A Grades", value: "98%" },
+                  { label: "Experience", value: "25+" },
+                  { label: "A Grades", value: "100%" },
+                  { label: "Paper Marking", value: "20+ Yrs" },
                 ].map((stat, i) => (
                   <div key={i}>
                     <h3 className="text-3xl md:text-4xl font-serif font-bold text-slate-900">{stat.value}</h3>
@@ -131,7 +131,7 @@ export default function Portfolio() {
                  <div className="bg-green-100 p-2 rounded-full"><CheckCircle2 className="w-6 h-6 text-green-600" /></div>
                  <div>
                    <p className="text-sm font-bold text-slate-900">Proven Results</p>
-                   <p className="text-xs text-slate-500">Local & Edexcel</p>
+                   <p className="text-xs text-slate-500">100% A Grades History</p>
                  </div>
                </div>
              </motion.div>
@@ -147,7 +147,7 @@ export default function Portfolio() {
                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                <div className="absolute bottom-6 left-6 right-6 text-white">
                  <p className="font-serif text-2xl">Ms. Sandani Niroda</p>
-                 <p className="text-white/80 text-sm">B.Sc (Kelaniya), M.Ed (Colombo)</p>
+                 <p className="text-white/80 text-sm">BSc (CS), MIT (Colombo), PGDE</p>
                </div>
             </div>
           </motion.div>
@@ -165,10 +165,15 @@ export default function Portfolio() {
                 Teaching ICT is not just about code,<br/> it is about <span className="text-amber-600 italic">digital literacy.</span>
               </h3>
               <p className="text-slate-600 leading-relaxed mb-6">
-                My journey as an educator began at the University of Kelaniya and has evolved through years of postgraduate research. I believe in a teaching style that adapts to the modern student—covering everything from algorithms to data logic simply.
+                With a background in Computer Science and a Masters in Information Technology from the University of Colombo, I bring over two decades of expertise. I serve as a teacher at a leading girls school in Colombo and have contributed to the nation as a <strong>"Guru Gedara" TV Presenter</strong> for Grade 11 ICT.
               </p>
               <ul className="space-y-4 mt-8">
-                {["Practical Coding Sessions", "Theory & Revision", "Past Paper Analysis", "Logic Building Techniques"].map((item, i) => (
+                 {[
+                    "National 'Guru Gedara' TV Presenter", 
+                    "O/L Paper Marking Examiner (Since 2007)", 
+                    "A/L Paper Marking Examiner (Since 2011)", 
+                    "Regional ICT Teacher Trainer"
+                  ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-slate-700 font-medium">
                     <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center">
                       <CheckCircle2 className="w-3.5 h-3.5 text-amber-700" />
@@ -181,9 +186,9 @@ export default function Portfolio() {
 
             <div className="space-y-6">
               {[
-                { degree: "Master of Education (M.Ed)", uni: "University of Colombo", year: "2018", icon: GraduationCap },
-                { degree: "Bachelor of Science (B.Sc)", uni: "University of Kelaniya", year: "2015", icon: Award },
-                { degree: "Diploma in ICT Education", uni: "National Institute", year: "2019", icon: Star },
+                { degree: "Masters in Information Technology (MIT)", uni: "University of Colombo", icon: GraduationCap },
+                { degree: "BSc (Computer Science)", uni: "University of Kelaniya", icon: Award },
+                { degree: "Post Graduate Diploma in Education (PGDE)", uni: "National Institute of Education", icon: Star },
               ].map((edu, index) => (
                 <FadeIn delay={index * 0.15} key={index}>
                   <div className="group flex items-start gap-6 p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-xl hover:border-amber-100 transition-all duration-300">
@@ -194,7 +199,7 @@ export default function Portfolio() {
                       <h4 className="text-lg md:text-xl font-bold text-slate-900">{edu.degree}</h4>
                       <p className="text-slate-500 font-medium">{edu.uni}</p>
                       <div className="mt-2 inline-block px-3 py-1 bg-white rounded-md text-xs font-bold text-amber-600 border border-amber-100">
-                        Completed {edu.year}
+                        Verified Qualification
                       </div>
                     </div>
                   </div>
@@ -205,81 +210,137 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Courses Section (Bento Grid Style) */}
+      {/* Class Schedule Section (Replaces Courses) */}
       <section className="py-24 px-4 md:px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto">
-          <SectionHeading title="ICT Curriculum 2026" subtitle="Select Your Path" align="center" />
+          <SectionHeading title="Class Schedules 2026" subtitle="Join Our Classes" align="center" />
           
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Card 1 */}
-            <FadeIn delay={0.1} className="md:col-span-2">
-              <div className="h-full bg-slate-900 text-white p-10 rounded-3xl relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/20 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-amber-500/30 transition-colors"></div>
+          <div className="grid md:grid-cols-2 gap-8">
+            
+            {/* Location 1: Kings Institute */}
+            <FadeIn delay={0.1}>
+              <div className="h-full bg-white p-8 md:p-10 rounded-3xl border border-slate-200 hover:shadow-2xl hover:border-amber-200 transition-all duration-300 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-100 rounded-bl-full -mr-4 -mt-4 opacity-50 group-hover:scale-110 transition-transform"></div>
+                
                 <div className="relative z-10">
-                  <div className="bg-amber-500 w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-                    <Monitor className="w-6 h-6 text-slate-900" />
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center text-white shadow-lg">
+                      <MapPin className="w-7 h-7" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-serif font-bold text-slate-900">Kings Institute</h3>
+                      <p className="text-slate-500 text-sm font-medium">Nugegoda</p>
+                    </div>
                   </div>
-                  <h3 className="text-3xl font-serif font-bold mb-4">Advanced Level ICT</h3>
-                  <p className="text-slate-300 mb-8 max-w-md leading-relaxed">
-                    The complete breakdown of the G.C.E A/L ICT syllabus. Covering programming, networking, and systems analysis for University entrance.
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    <span className="px-4 py-2 bg-white/10 rounded-lg text-sm font-medium backdrop-blur-sm">Theory</span>
-                    <span className="px-4 py-2 bg-white/10 rounded-lg text-sm font-medium backdrop-blur-sm">Revision</span>
-                    <span className="px-4 py-2 bg-amber-500 text-slate-900 rounded-lg text-sm font-bold">2026 Intake</span>
+
+                  <div className="space-y-4">
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <div className="flex justify-between items-center mb-2">
+                           <span className="font-bold text-slate-900">27 OL (New)</span>
+                           <span className="text-xs font-bold bg-amber-100 text-amber-700 px-2 py-1 rounded">English Medium</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-slate-600 text-sm">
+                           <Calendar className="w-4 h-4" /> Tuesday 2:30 PM - 4:30 PM
+                        </div>
+                    </div>
+
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <div className="flex justify-between items-center mb-2">
+                           <span className="font-bold text-slate-900">25 OL (Revision)</span>
+                           <span className="text-xs font-bold bg-blue-100 text-blue-700 px-2 py-1 rounded">Revision</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-slate-600 text-sm">
+                           <Calendar className="w-4 h-4" /> Thursday 2:30 PM - 4:30 PM
+                        </div>
+                    </div>
+
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <div className="flex justify-between items-center mb-2">
+                           <span className="font-bold text-slate-900">26 OL (Gr 10/11)</span>
+                           <span className="text-xs font-bold bg-green-100 text-green-700 px-2 py-1 rounded">Theory</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-slate-600 text-sm">
+                           <Calendar className="w-4 h-4" /> Thursday 2:30 PM - 4:30 PM
+                        </div>
+                    </div>
+
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <div className="flex justify-between items-center mb-2">
+                           <span className="font-bold text-slate-900">27 AL</span>
+                           <span className="text-xs font-bold bg-amber-100 text-amber-700 px-2 py-1 rounded">English Medium</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-slate-600 text-sm">
+                           <Calendar className="w-4 h-4" /> Thursday 2:30 PM - 4:30 PM
+                        </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </FadeIn>
 
-            {/* Card 2 */}
+            {/* Location 2: Piliyandala (Small Groups) */}
             <FadeIn delay={0.2}>
-              <div className="h-full bg-white p-8 rounded-3xl border border-slate-200 hover:shadow-xl hover:border-amber-200 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-slate-900 mb-6 group-hover:scale-110 transition-transform">
-                   <Code2 className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-3">O/L ICT</h3>
-                <p className="text-slate-500 text-sm mb-6 leading-relaxed">
-                  Building a strong technical foundation for Grade 10 & 11 students. (Local Syllabus)
-                </p>
-                <button className="w-full py-3 rounded-xl border border-slate-200 text-slate-900 font-bold hover:bg-slate-900 hover:text-white transition-colors">
-                  View Schedule
-                </button>
-              </div>
-            </FadeIn>
+              <div className="h-full bg-slate-900 text-white p-8 md:p-10 rounded-3xl border border-slate-800 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
+                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-500/10 rounded-tr-full -ml-8 -mb-8 blur-2xl group-hover:bg-amber-500/20 transition-colors"></div>
+                 
+                 <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="w-14 h-14 bg-amber-500 rounded-2xl flex items-center justify-center text-slate-900 shadow-lg shadow-amber-500/20">
+                      <Monitor className="w-7 h-7" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-serif font-bold text-white">Piliyandala</h3>
+                      <p className="text-amber-500 text-sm font-bold uppercase tracking-wide">Small Group Classes</p>
+                    </div>
+                  </div>
 
-            {/* Card 3 */}
-            <FadeIn delay={0.3}>
-              <div className="h-full bg-white p-8 rounded-3xl border border-slate-200 hover:shadow-xl hover:border-amber-200 transition-all duration-300 group">
-                 <div className="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-slate-900 mb-6 group-hover:scale-110 transition-transform">
-                   <Laptop className="w-6 h-6" />
+                  <div className="space-y-3">
+                     {[
+                        { day: "Monday", time: "6:30 PM - 8:30 PM", cls: "26 OL (English Medium)" },
+                        { day: "Wednesday", time: "4:00 PM - 6:00 PM", cls: "27 OL New (English Medium)" },
+                        { day: "Wednesday", time: "6:00 PM - 8:00 PM", cls: "25 OL Revision (English Medium)" },
+                        { day: "Friday", time: "4:00 PM - 6:00 PM", cls: "26 AL Rev & Theory (English Med)" },
+                        { day: "Saturday", time: "9:30 AM - 11:30 AM", cls: "27 AL New (English Medium)" },
+                        { day: "Sunday", time: "7:30 AM - 9:30 AM", cls: "26 AL (English Medium)" },
+                     ].map((slot, idx) => (
+                        <div key={idx} className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                           <div>
+                              <p className="font-bold text-sm text-amber-100">{slot.day}</p>
+                              <p className="text-xs text-slate-400">{slot.time}</p>
+                           </div>
+                           <div className="text-right">
+                              <p className="font-medium text-sm text-white">{slot.cls}</p>
+                           </div>
+                        </div>
+                     ))}
+                  </div>
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-3">Edexcel / Local</h3>
-                <p className="text-slate-500 text-sm mb-6 leading-relaxed">
-                   Specialized coaching for Edexcel & Local syllabus (English Medium).
-                </p>
-                <button className="w-full py-3 rounded-xl border border-slate-200 text-slate-900 font-bold hover:bg-slate-900 hover:text-white transition-colors">
-                  Request Info
-                </button>
               </div>
             </FadeIn>
             
-             {/* Card 4 - Testimonial Style */}
-             <FadeIn delay={0.4} className="md:col-span-2">
-              <div className="h-full bg-gradient-to-r from-amber-50 to-white p-8 rounded-3xl border border-amber-100 flex items-center">
-                 <div>
-                    <div className="flex gap-1 mb-4">
-                      {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 fill-amber-500 text-amber-500" />)}
-                    </div>
-                    <p className="text-lg font-serif italic text-slate-800 mb-4">
-                      "ICT was difficult for me, but Ms. Sandani's logic-based teaching style made coding easy. I got an 'A' in my O/Ls!"
-                    </p>
-                    <p className="text-sm font-bold text-slate-900">— Dilshan Perera, <span className="text-slate-500 font-normal">Student (2024 Batch)</span></p>
-                 </div>
-              </div>
-            </FadeIn>
-
           </div>
+
+          {/* Additional Features Bar */}
+          <FadeIn delay={0.4} className="mt-12">
+            <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { icon: Tv, title: "TV Presenter", desc: "Experience from 'Guru Gedara' National TV Program." },
+                  { icon: FileCheck, title: "Paper Marking", desc: "20+ Years of Exam Paper Marking Experience." },
+                  { icon: Laptop, title: "Practical ICT", desc: "100% Practical based learning approach." }
+                ].map((f, i) => (
+                  <div key={i} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center text-amber-600">
+                        <f.icon className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-slate-900">{f.title}</h4>
+                        <p className="text-xs text-slate-500">{f.desc}</p>
+                      </div>
+                  </div>
+                ))}
+            </div>
+          </FadeIn>
+
         </div>
       </section>
 
@@ -295,12 +356,12 @@ export default function Portfolio() {
                 Start your <br/> <span className="text-amber-500">ICT Journey.</span>
               </h2>
               <p className="text-slate-400 mb-12 max-w-md text-lg">
-                Classes are filling up fast for the 2026 academic year. Secure your spot in the physical or online batch.
+                Classes are filling up fast for the 2026 academic year. Secure your spot in the Piliyandala (Small Group) or Kings Institute batch.
               </p>
 
               <div className="space-y-8">
                 {[
-                  { icon: MapPin, title: "Main Center", text: "No. 123, High Level Road, Nugegoda." },
+                  { icon: MapPin, title: "Locations", text: "Kings Institute Nugegoda & Piliyandala" },
                   { icon: Phone, title: "Call Us", text: "+94 77 123 4567" },
                   { icon: Mail, title: "Email", text: "info@sandanihettiarachchi.lk" }
                 ].map((item, i) => (
@@ -331,11 +392,11 @@ export default function Portfolio() {
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Select Course</label>
+                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Select Location</label>
                 <select className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-slate-300 focus:outline-none focus:border-amber-500 focus:bg-slate-800 transition-all">
-                   <option>A/L ICT (2026)</option>
-                   <option>O/L ICT (Grade 10/11)</option>
-                   <option>Edexcel/Cambridge ICT</option>
+                   <option>Kings Institute (Nugegoda)</option>
+                   <option>Piliyandala (Small Group)</option>
+                   <option>Online</option>
                 </select>
               </div>
               <div className="space-y-2">
