@@ -125,11 +125,8 @@ export const metadata: Metadata = {
   
   // Verification
   verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE",
-    yandex: "YOUR_YANDEX_CODE", // Optional for Int. SEO
-    other: {
-      "facebook-domain-verification": "YOUR_FB_CODE",
-    },
+    google: "HLlRULrglqkzcSsxacc5bzWTKyHwRrv6V-7WXYuATqI",
+    yandex: "eb04657d647a39c3", 
   },
 };
 
