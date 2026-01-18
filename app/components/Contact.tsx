@@ -7,7 +7,7 @@ import { StaggerContainer, FadeUpItem } from "./ui/Animations";
 
 export default function Contact() {
   return (
-    <section className="py-16 md:py-24 bg-slate-900 relative overflow-hidden px-4 md:px-6">
+    <section id="contact" className="py-16 md:py-24 bg-slate-900 relative overflow-hidden px-4 md:px-6">
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
       <motion.div 
          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
@@ -58,32 +58,62 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="bg-white/5 backdrop-blur-xl p-6 md:p-10 rounded-3xl border border-white/10 shadow-2xl"
         >
+          {/* ACCESSIBILITY OPTIMIZED FORM */}
           <form className="space-y-4 md:space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               <div className="space-y-2">
-                <label className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">First Name</label>
-                <input type="text" className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-3 md:p-4 text-white focus:outline-none focus:border-amber-500 focus:bg-slate-800 transition-all text-sm" placeholder="John" />
+                <label htmlFor="fname" className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">First Name</label>
+                <input 
+                  id="fname" 
+                  name="firstName" 
+                  autoComplete="given-name" 
+                  type="text" 
+                  aria-label="First Name"
+                  className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-3 md:p-4 text-white focus:outline-none focus:border-amber-500 focus:bg-slate-800 transition-all text-sm" 
+                  placeholder="John" 
+                />
               </div>
               <div className="space-y-2">
-                <label className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">Last Name</label>
-                <input type="text" className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-3 md:p-4 text-white focus:outline-none focus:border-amber-500 focus:bg-slate-800 transition-all text-sm" placeholder="Doe" />
+                <label htmlFor="lname" className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">Last Name</label>
+                <input 
+                  id="lname" 
+                  name="lastName" 
+                  autoComplete="family-name" 
+                  type="text" 
+                  aria-label="Last Name"
+                  className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-3 md:p-4 text-white focus:outline-none focus:border-amber-500 focus:bg-slate-800 transition-all text-sm" 
+                  placeholder="Doe" 
+                />
               </div>
             </div>
             <div className="space-y-2">
-              <label className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">Select Location</label>
-              <select className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-3 md:p-4 text-slate-300 focus:outline-none focus:border-amber-500 focus:bg-slate-800 transition-all text-sm">
+              <label htmlFor="location" className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">Select Location</label>
+              <select 
+                id="location" 
+                name="location" 
+                aria-label="Select Class Location"
+                className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-3 md:p-4 text-slate-300 focus:outline-none focus:border-amber-500 focus:bg-slate-800 transition-all text-sm"
+              >
                  <option>Kings Institute (Nugegoda)</option>
                  <option>Piliyandala (Small Group)</option>
                  <option>Online</option>
               </select>
             </div>
             <div className="space-y-2">
-              <label className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">Message</label>
-              <textarea rows={4} className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-3 md:p-4 text-white focus:outline-none focus:border-amber-500 focus:bg-slate-800 transition-all text-sm" placeholder="I would like to inquire about..." />
+              <label htmlFor="message" className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-wider">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows={4} 
+                aria-label="Your Message"
+                className="w-full bg-slate-800/50 border border-slate-700 rounded-lg p-3 md:p-4 text-white focus:outline-none focus:border-amber-500 focus:bg-slate-800 transition-all text-sm" 
+                placeholder="I would like to inquire about..." 
+              />
             </div>
             <motion.button 
               whileHover={{ scale: 1.02, boxShadow: "0 20px 25px -5px rgb(245 158 11 / 0.3)" }}
               whileTap={{ scale: 0.98 }}
+              type="submit"
               className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-900 font-bold py-3 md:py-4 rounded-xl shadow-lg shadow-amber-500/25 transition-all text-sm md:text-base"
             >
               Submit Inquiry
