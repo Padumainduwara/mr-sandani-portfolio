@@ -57,6 +57,10 @@ const nextConfig: NextConfig = {
             value: 'nosniff'
           },
           {
+            key: "Content-Security-Policy",
+            value: "frame-ancestors 'self' https://www.padumainduwara.me https://padumainduwara.me http://localhost:3000;",
+          },
+          {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin'
           }
