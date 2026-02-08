@@ -11,9 +11,8 @@ import Qualifications from "./components/Qualifications";
 import Schedules from "./components/Schedules";
 import Contact from "./components/Contact";
 import ScrollProgress from "./components/ScrollProgress";
+import WhatsAppFab from "./components/WhatsAppFab";
 
-// --- MASTER LEVEL AI-READY SEO DATA (JSON-LD) ---
-// UPDATED: Added Entity Linking (Wikidata), Voice Search (Speakable), and Granular Local SEO
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -251,6 +250,7 @@ export default function Portfolio() {
       />
 
       {/* COMPONENT STACK */}
+      <WhatsAppFab />
       <ScrollProgress />
       <Navbar />
       <Hero />
@@ -264,20 +264,34 @@ export default function Portfolio() {
            <p className="text-xl md:text-2xl font-serif font-bold text-white mb-4">
              Ms. Sandani Hettiarachchi<span className="text-amber-600">.</span>
            </p>
+           
+           {/* Social Media Links */}
            <div className="flex justify-center gap-6 mb-8">
-              {["Facebook", "Instagram", "LinkedIn"].map((social) => (
+              {[
+                { name: "Facebook", url: "https://www.facebook.com/sandani.hettiarachchi" },
+                { name: "Instagram", url: "#" },
+                { name: "WhatsApp", url: "https://wa.me/94716898264" }
+              ].map((social) => (
                 <a 
-                  key={social} 
-                  href="#" 
+                  key={social.name} 
+                  href={social.url} 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-slate-500 hover:text-amber-500 transition-colors text-xs md:text-sm font-medium uppercase tracking-widest"
-                  aria-label={`Visit our ${social} page`}
+                  aria-label={`Visit our ${social.name} page`}
                 >
-                  {social}
+                  {social.name}
                 </a>
               ))}
            </div>
+
+           {/* Copyright Notice */}
            <p className="text-slate-600 text-xs md:text-sm">
              © {new Date().getFullYear()} Ms. Sandani Niroda Hettiarachchi. All rights reserved.
+           </p>
+
+           <p className="text-slate-800 text-[10px] md:text-xs mt-6 font-medium tracking-wide">
+             Developed by <a href="https://padumainduwara.me" target="_blank" rel="noopener noreferrer" className="text-slate-700 hover:text-amber-600 transition-colors">Paduma Induwara</a>
            </p>
          </div>
       </footer>

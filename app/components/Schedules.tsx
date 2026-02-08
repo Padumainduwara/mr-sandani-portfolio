@@ -7,7 +7,7 @@ import { SectionHeading, StaggerContainer, FadeUpItem } from "./ui/Animations";
 
 export default function Schedules() {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6 bg-slate-50">
+    <section id="schedules" className="py-16 md:py-24 px-4 md:px-6 bg-slate-50">
       <div className="max-w-7xl mx-auto">
         <SectionHeading title="Class Schedules 2026" subtitle="Join Our Classes" align="center" />
         

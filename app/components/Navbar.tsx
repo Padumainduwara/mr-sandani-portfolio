@@ -26,13 +26,14 @@ export default function Navbar() {
 
         {/* Desktop Menu Button */}
         <div className="hidden md:block">
-          <motion.button 
+          <motion.a 
+            href="#schedules"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-slate-900 text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-amber-600 hover:shadow-lg hover:shadow-amber-600/20 transition-colors duration-300"
+            className="bg-slate-900 text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-amber-600 hover:shadow-lg hover:shadow-amber-600/20 transition-colors duration-300 inline-block cursor-pointer"
           >
             Enrol for 2026
-          </motion.button>
+          </motion.a>
         </div>
 
         {/* Mobile Menu Toggle */}

@@ -51,20 +51,27 @@ export default function Hero() {
             </FadeUpItem>
             
             <FadeUpItem className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <motion.button 
+              {/* 1. Join My Class -> WhatsApp Link */}
+              <motion.a 
+                href="https://wa.me/94716898264"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-slate-900/20 text-sm md:text-base"
+                className="flex items-center justify-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-slate-900/20 text-sm md:text-base cursor-pointer"
               >
                 Join My Class <ChevronRight className="w-4 h-4" />
-              </motion.button>
-              <motion.button 
+              </motion.a>
+
+              {/* 2. Contact Me -> Contact Section Link */}
+              <motion.a 
+                href="#contact"
                 whileHover={{ scale: 1.05, backgroundColor: "#f8fafc" }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center gap-2 bg-white border border-slate-200 text-slate-900 px-8 py-4 rounded-full font-bold transition-colors text-sm md:text-base"
+                className="flex items-center justify-center gap-2 bg-white border border-slate-200 text-slate-900 px-8 py-4 rounded-full font-bold transition-colors text-sm md:text-base cursor-pointer"
               >
                 Contact Me
-              </motion.button>
+              </motion.a>
             </FadeUpItem>
 
             {/* Verified Stats with Counter Animation */}
